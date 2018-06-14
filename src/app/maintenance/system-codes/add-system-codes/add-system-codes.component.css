@@ -1,0 +1,151 @@
+/** style classes for add system codes**/
+
+.section-padding{
+    padding-top:9px;
+}
+.panel-title h3{
+    font-size: 24px;
+}
+
+.panel-title{
+    color:#7e2d40;
+    padding-left: 21px;
+    font-size: 24px;
+}
+.arrow-color{
+    color: black;
+    margin-left: -0.1em;
+    font-weight: initial;
+    width: 12.3px;
+    height:6.5px;
+    font-size: 19px; 
+    padding-right: 15px;
+
+}
+.paddingTopClass{
+    /* padding-top: 10px;*/
+width:227px;
+}
+.control-label{
+    padding-left:12px !important;
+    float: left;
+    padding-right: 10px;
+    /* systemvalues (1, 1) */
+    margin-left: 4em;
+    width: 200px;
+}
+label.required:after {
+    content: " *"; 
+    color: red;
+  }
+
+  .paddingDataClass{
+    padding-bottom: 15px!important;
+    /* margin-left: 1px; */
+    margin-left: 3.4em;
+}
+
+label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #444444;;
+    font-style: normal;
+    text-align: left;
+    padding-top:10px;
+    padding-bottom:5px;
+
+}
+.paddingButtons{
+    margin-top: 20px!important;
+}
+
+app-button {
+    padding-left: 21px;
+}
+
+ .title-input{
+    width: 16em;
+}
+ 
+.addSystemCodesButtons{    
+    position: absolute !important;
+    background-color: #f5f5f5;
+    width: 100%;
+    margin-left: -50px;
+    padding-left: 30px;
+    height: 70px;
+    padding-top: 10px;
+    bottom: 0;
+} 
+
+app-input-text-area {
+    width :100%;
+}
+app-input {
+    width :100%;
+}
+/* 
+#title, #control{
+    margin-right: -25px
+} */
+
+.no-padding-left {
+    padding-left: 0px !important;
+}
+
+/* .ui-multiselect .ui-multiselect-label{
+    color:grey;
+} */
+.paddingTopClass{
+    padding-top: 10px;
+}
+
+.dropdown {
+    min-width: 100%;
+    width: max-content;
+    margin-left: -16px !important;
+  }
+
+  .section-padding{
+    padding-top:9px;
+    margin-left: -43px;
+    margin-top: -2px;
+}
+
+.push-right {
+    float: right;
+}
+p-table {
+    padding-left: 2em;
+}
+
+input{
+    padding-top: 10px;
+    width :90%
+}
+textarea{
+    padding-top:10px;
+    width :90%
+}
+.help-block{
+    float: right;
+    margin-right: 0px !important;
+    font-size: 11px;
+    position: relative;
+}
+
+#checkbox{
+margin-left: 55px;
+font-size: 14px; 
+font-family:Arial, Helvetica, sans-serif ; 
+color: #444444;
+}
+
+
+.textAreaPadding {
+    padding-right: 42px !important;
+    padding-left: 5px !important; 
+ }
+ .paddingForm {
+     padding: 0.25em !important;
+ }

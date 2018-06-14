@@ -1,0 +1,143 @@
+/** style classes for  system codes**/
+
+.paddingTopClass{
+    /* padding-top: 10px;*/
+width:227px;
+}
+
+.paddingButtons{
+    margin-top: 20px!important;
+}
+
+.ui-dropdown .ui-dropdown-panel {
+    min-width: 100%;
+    width: max-content;
+  }
+
+  label.required:after {content: " *"; color: red;}
+  
+  .panel-title{
+    color:#205492;
+    /* padding-left: 6px; */
+    padding-left: 21px !important;
+    letter-spacing: 0.1px !important;
+    width: 280px !important;
+    height: 29px !important;
+}
+
+app-button {
+    padding-left: 20px;
+}
+
+.control-label{
+    /* padding-left:10px; */
+    padding-left:12px !important;
+    float: left;
+    padding-right: 10px;
+    /* systemvalues (1, 1) */
+    margin-left: 0em;
+    width: 200px ;
+    height: 30px ;
+    font-weight: bold;
+    color: #444444 !important;
+}
+label {
+   
+    font-weight: bold;
+    color: #444444;;
+    font-style: normal;
+    text-align: left;
+    padding-top:10px;
+    padding-bottom:5px;
+
+}
+.ui-inputtext{
+   font-weight: normal !important;
+   color: #444444;
+    }
+
+ .title-input{
+    width: 16em;
+}
+.arrow-color{
+    color: black;
+    margin-left: -1.7em;
+    font-weight: initial;
+    width: 12.3px;
+    height:6.4px;
+
+}
+
+app-input-text-area {
+    width :100%;
+}
+app-input {
+    width :100%;
+}
+
+app-calender {
+    width :100%;
+}
+
+#application{
+    margin-left:8px;
+}
+
+.paddingDataClass{
+    padding-bottom: 15px!important;
+    margin-left: 1px;
+}
+
+.no-padding-left {
+    padding-left: 0px !important;
+}
+
+.section-padding{
+    padding-top:9px;
+}
+.panel-title h3{
+    font-size: 24px;
+}
+
+.ui-multiselect .ui-multiselect-label{
+    color:grey;
+}
+
+.ui-dropdown .ui-dropdown-panel {
+    min-width: 100%;
+    width: max-content;
+  }
+
+  .section-padding{
+    padding-top:17px;
+    margin-top: -2px;
+    padding-right: 30px;
+}
+
+.push-right {
+    float: right;
+}
+
+
+.padding-grid {
+    padding-left: 2.2em !important;
+}
+.padding-toolbar {
+    padding-left : 2em;
+}
+.hyperlink {
+    text-decoration: underline !important;
+    cursor: pointer;
+}
+
+.ui-table .ui-table-thead > tr > th, .ui-table .ui-table-tbody > tr > td, .ui-table .ui-table-tfoot > tr > td {
+    border: solid 1px lightgrey;
+}
+
+.toolbar {
+    border: solid 1px lightgrey;
+}
+.panelContainer {
+    padding-right: 30px;
+    padding-left: 30px;
+}

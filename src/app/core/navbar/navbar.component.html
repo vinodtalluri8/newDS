@@ -1,0 +1,42 @@
+<!--<div class="wrapper">
+  <!-- Sidebar Holder -->
+  <!--<nav id="sidebar">
+
+    <ul class="list-unstyled components">
+
+      <li [routerLinkActive]="['active']">
+        <div class="row">
+          <div class="col-sm-2 col-md-2 col-lg-2 iconmargin">
+              <img src="./assets/system_codes_active.png" alt= "Active System Code.png">
+          </div>
+          <div class="col-sm-8 col-md-8 col-lg-8 labelMargin">
+            <a routerLink="/systemcodes" routerLinkActiveOptions='{exact:false}'>System Codes</a>
+          </div>
+        </div>
+      </li>
+      <li [routerLinkActive]="['active']">
+        <div class="row">
+          <div class="col-sm-2 col-md-2 col-lg-2 iconmargin">
+              <img src="./assets/system_values_inactive.png" alt= "Inactive System value.png">
+          </div>
+          <div class="col-sm-8 col-md-8 col-lg-8 labelMargin">
+            <a routerLink="/systemvalues" routerLinkActiveOptions='{exact:false}'>System Values</a>
+          </div>
+        </div>
+
+      </li>
+      
+    </ul>
+
+
+  </nav>
+
+
+  <!-- Page Content Holder -->
+  <div id="content">
+      <app-navbar-topmenu [navItems] ='navItems'></app-navbar-topmenu>
+      <div class='panelContainer'>
+    <router-outlet></router-outlet>
+  </div>
+
+</div>

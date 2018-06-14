@@ -1,0 +1,56 @@
+<form [formGroup]="addSystemValueForm">
+  <div class="ui-g ui-fluid">
+    <div class="ui-g-12">
+        <p-messages [(value)]="msgs"></p-messages>      
+    </div>
+    <div class="ui-g-12 form-group modalForm" *ngFor="let label of headerLabelList">
+      <div class="ui-g-4 paddingForm">
+        <label for="vin" class="required">{{label.header}}</label>
+      </div>
+      <div class="ui-g-8 paddingForm" *ngIf="label.field == 'column1'">
+        <input class="form-control" formControlName="column1" [(ngModel)]='column1'>
+
+      </div>
+      <div class="ui-g-8 paddingForm" *ngIf="label.field == 'column2'">
+        <input class="form-control" formControlName="column2" [(ngModel)]='column2'>
+
+      </div>
+      <div class="ui-g-8 paddingForm" *ngIf="label.field == 'column3'">
+        <input class="form-control" formControlName="column3" [(ngModel)]='column3'>
+
+      </div>
+
+      <div class="ui-g-8 paddingForm" *ngIf="label.field == 'column4'">
+        <input appNumberonly class="form-control" formControlName="column4" [(ngModel)]='column4'>
+
+      </div>
+      <div class="ui-g-8 paddingForm" *ngIf="label.field == 'column5'">
+        <input appNumberonly class="form-control" formControlName="column5" [(ngModel)]='column5'>
+
+      </div>
+      <div class="ui-g-8 paddingForm" *ngIf="label.field == 'column6'">
+        <input appNumberonly class="form-control" formControlName="column6" [(ngModel)]='column6'>
+
+      </div>
+    </div>
+    <div class="ui-g-12 form-group modalForm">
+      <div class="ui-g-4 paddingForm">
+        <label for="color">Description</label>
+      </div>
+      <div class="ui-g-8 textAreaPadding">
+        <app-input-text-area rowSize='7' (inputTextAreaSelected)='this.description= $event' [value]='description' name='control' [maxlength]= 255></app-input-text-area>
+      </div>
+    </div>
+  </div>
+</form>
+<p-footer>
+  <div class="ui-g-4"></div>
+  <div *ngIf="!this.isUpdate" class="ui-g-8 ui-dialog-buttonpane ui-helper-clearfix">
+    <app-button label='Save' (click)='addSystemValues()' [disabled]='this.disable("add")' styleClass='button-action'></app-button>
+    <app-button label='Cancel' (click)='back()' styleClass='button-cancel'></app-button>
+  </div>
+  <div *ngIf="this.isUpdate" class=" ui-g-8 ui-dialog-buttonpane ui-helper-clearfix">
+    <app-button label='Save' (click)='updateSystemValues()' [disabled]='this.disable("update")'styleClass='button-action'></app-button>
+    <app-button label='Cancel' (click)='back()' styleClass='button-cancel'></app-button>
+  </div>
+</p-footer>

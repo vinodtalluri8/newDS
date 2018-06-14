@@ -1,0 +1,83 @@
+<!-- system-codes screen display -->
+
+<div class="row">
+  <div class="col-sm-5 col-md-5 col-lg-8 panel panel-default">
+    <div class="panel-heading section-padding">
+      <h3 class="panel-title " style="font-size: 24px">Maintain System Codes</h3>
+    </div>
+  </div>
+</div>
+<div class="panel-body section-padding">
+  <div class="row row-padding-5">
+    <div class="col-sm-4 col-md-4 col-lg-4" id="application">
+      <div class="row paddingTopClass">
+        <div class="col-sm-9 col-md-9 col-lg-9">
+          <label class="control-label">Application</label>
+        </div>
+      </div>
+      <div class="row paddingDataClass">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+          <app-dropdown [datasource]='applications' (selectedItemChange)='onChangeApplication($event)' [selectedItem]='selectedApplication'></app-dropdown>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row gridPadding padding-grid">
+    <div class="toolbar" *ngIf="systemCodeDateList && systemCodeDateList.length > 0">
+      <img class="imgAlign pull-right" (click)="scd.exportCSV()" src="./assets/icon-excel-export.png" alt= "Export to Excel.png">
+   </div>
+    <p-table #scd [columns]="colHeaders" [value]="systemCodeDateList" [responsive]="true" [paginator]="isPaginator" [rows]="selectedRows"
+      [alwaysShowPaginator]="false" [exportFilename]="this.exportFileName + '-' + this.selectedApplication">
+      <ng-template pTemplate="caption">
+        <div class="ui-helper-clearfix"></div>
+      </ng-template>
+      <ng-template pTemplate="header" let-columns>
+        <tr>
+          <th *ngFor="let col of columns" [pSortableColumn]="col.field">
+            {{col.header}}
+            <p-sortIcon *ngIf="col.field !== 'action' " [field]="col.field"></p-sortIcon>
+          </th>
+        </tr>
+        <tr *ngIf="filterable && systemCodeDateList && systemCodeDateList.length > 0">
+          <th *ngFor="let col of columns">
+            <input *ngIf="col.field !== 'action'" pInputText type="text" placeholder="Filter" (input)="scd.filter($event.target.value, col.field, col.filterMatchMode)">
+
+          </th>
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-rowData let-columns="columns">
+        <tr [pSelectableRow]="rowData">
+          <td *ngFor="let col of columns">
+            <ng-container *ngIf="col.field == 'action'; else elseTemplate">
+              <a class="hyperlink" (click)="navigateListSystem(rowData['code'])">{{rowData[col.field]}}</a>
+            </ng-container>
+            <ng-template #elseTemplate>
+              {{rowData[col.field]}}
+            </ng-template>
+
+
+          </td>
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="emptymessage" let-columns>
+        <tr>
+          <td [attr.colspan]="columns.length" style="text-align: center">
+            No records found
+          </td>
+        </tr>
+      </ng-template>
+
+      <ng-template pTemplate="paginatorright" let-state>
+          <div class="grid-page-dropdown">
+        <app-dropdown [datasource]='displayRows' (selectedItemChange)='checkAndEnablePage($event)' [selectedItem]='selectedRows'></app-dropdown>
+        </div>
+      </ng-template>
+    </p-table>
+
+    <div *ngIf="!isPaginator" class="pageAlign">
+      <div class="grid-page-dropdown" style="margin-right: -6px;">
+      <app-dropdown [datasource]='displayRows' (selectedItemChange)='checkAndEnablePage($event)' [selectedItem]='selectedRows'></app-dropdown>
+      </div>
+    </div>
+  </div>
+</div>
